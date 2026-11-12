@@ -411,14 +411,14 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 </footer>
 
 </div>
-<script>(function(){var P={claude:["Claude","Anthropic"],anthropic:["Claude","Anthropic"],gemini:["Gemini","Google"],google:["Gemini","Google"],openai:["OpenAI","OpenAI"],gpt:["OpenAI","OpenAI"],mistral:["Mistral","Mistral AI"],elevenlabs:["ElevenLabs","ElevenLabs"],aws:["Amazon Bedrock","AWS"],bedrock:["Amazon Bedrock","AWS"],azure:["Azure AI","Microsoft"],microsoft:["Azure AI","Microsoft"],xai:["Grok","xAI"],grok:["Grok","xAI"],deepseek:["DeepSeek","DeepSeek"],cohere:["Cohere","Cohere"],groq:["Groq","Groq"],zoo:["Zoo","Zoo"],quilter:["Quilter","Quilter"]};
+<script>(function(){var P={claude:["Claude","Anthropic"],anthropic:["Claude","Anthropic"],gemini:["Gemini","Google"],google:["Gemini","Google"],openai:["OpenAI","OpenAI"],gpt:["OpenAI","OpenAI"],mistral:["Mistral","Mistral AI"],elevenlabs:["ElevenLabs","ElevenLabs"],aws:["Amazon Bedrock","AWS"],bedrock:["Amazon Bedrock","AWS"],azure:["Azure AI","Microsoft"],microsoft:["Azure AI","Microsoft"],xai:["Grok","xAI"],grok:["Grok","xAI"],deepseek:["DeepSeek","DeepSeek"],cohere:["Cohere","Cohere"],groq:["Groq","Groq"],zoo:["Zoo","Zoo"],quilter:["Quilter","Quilter"],turkcell:["Turkcell","Turkcell",1]};
 var k=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z]/g,""),x=P[k];
 document.querySelectorAll(".lang a").forEach(function(a){a.addEventListener("click",function(){a.href=a.getAttribute("href").split(/[?#]/)[0]+location.search+location.hash})});
 if(!x)return;var n=x[0],o=x[1],q=function(s){return document.querySelector('[data-ai="'+s+'"]')},f=function(s){return s.split("{name}").join(n).split("{org}").join(o)};
 var e=q("name");e.textContent=n+"?";if(o!==n){var by=q("by");by.textContent="by "+o;by.hidden=false}
-q("term").textContent=n+" · new project";q("label").textContent="Main sponsor · seat saved for you";
+if(!x[2])q("term").textContent=n+" · new project";q("label").textContent="Main sponsor · seat saved for you";
 q("title").innerHTML="";q("title").textContent=n+" ";var sm=document.createElement("span");sm.style.cssText="display:block;margin-top:6px;font-size:18px;line-height:24px;color:#FFB347;font-weight:500";sm.textContent=f("We saved this seat for {org}.");q("title").appendChild(sm);
-q("text").textContent=f("{name} access and credits for participants; in return, {name} becomes the name of Türkiye's first open hardware challenge where AI designs a working device from a single paragraph.");})()</script>
+q("text").textContent=f(x[2]?"AI and cloud support for participants; in return, {name} becomes the name of Türkiye's first open hardware challenge where AI designs a working device from a single paragraph.":"{name} access and credits for participants; in return, {name} becomes the name of Türkiye's first open hardware challenge where AI designs a working device from a single paragraph.");})()</script>
 <script>(function(){var f=document.getElementById("notify-form"),m=document.getElementById("notify-msg"),e=document.getElementById("notify-email"),b=f.querySelector("button");
 f.addEventListener("submit",function(ev){ev.preventDefault();if(!e.checkValidity()||!e.value.trim()){e.focus();e.reportValidity();return}
 b.disabled=true;m.textContent='Sending…';

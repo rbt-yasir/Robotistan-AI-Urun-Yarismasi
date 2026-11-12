@@ -411,14 +411,14 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 </footer>
 
 </div>
-<script>(function(){var P={claude:["Claude","Anthropic"],anthropic:["Claude","Anthropic"],gemini:["Gemini","Google"],google:["Gemini","Google"],openai:["OpenAI","OpenAI"],gpt:["OpenAI","OpenAI"],mistral:["Mistral","Mistral AI"],elevenlabs:["ElevenLabs","ElevenLabs"],aws:["Amazon Bedrock","AWS"],bedrock:["Amazon Bedrock","AWS"],azure:["Azure AI","Microsoft"],microsoft:["Azure AI","Microsoft"],xai:["Grok","xAI"],grok:["Grok","xAI"],deepseek:["DeepSeek","DeepSeek"],cohere:["Cohere","Cohere"],groq:["Groq","Groq"],zoo:["Zoo","Zoo"],quilter:["Quilter","Quilter"]};
+<script>(function(){var P={claude:["Claude","Anthropic"],anthropic:["Claude","Anthropic"],gemini:["Gemini","Google"],google:["Gemini","Google"],openai:["OpenAI","OpenAI"],gpt:["OpenAI","OpenAI"],mistral:["Mistral","Mistral AI"],elevenlabs:["ElevenLabs","ElevenLabs"],aws:["Amazon Bedrock","AWS"],bedrock:["Amazon Bedrock","AWS"],azure:["Azure AI","Microsoft"],microsoft:["Azure AI","Microsoft"],xai:["Grok","xAI"],grok:["Grok","xAI"],deepseek:["DeepSeek","DeepSeek"],cohere:["Cohere","Cohere"],groq:["Groq","Groq"],zoo:["Zoo","Zoo"],quilter:["Quilter","Quilter"],turkcell:["Turkcell","Turkcell",1]};
 var k=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z]/g,""),x=P[k];
 document.querySelectorAll(".lang a").forEach(function(a){a.addEventListener("click",function(){a.href=a.getAttribute("href").split(/[?#]/)[0]+location.search+location.hash})});
 if(!x)return;var n=x[0],o=x[1],q=function(s){return document.querySelector('[data-ai="'+s+'"]')},f=function(s){return s.split("{name}").join(n).split("{org}").join(o)};
 var e=q("name");e.textContent=n+"?";if(o!==n){var by=q("by");by.textContent="by "+o;by.hidden=false}
-q("term").textContent=n+" · yeni proje";q("label").textContent="Ana sponsor · bu koltuk sizin için ayrıldı";
+if(!x[2])q("term").textContent=n+" · yeni proje";q("label").textContent="Ana sponsor · bu koltuk sizin için ayrıldı";
 q("title").innerHTML="";q("title").textContent=n+" ";var sm=document.createElement("span");sm.style.cssText="display:block;margin-top:6px;font-size:18px;line-height:24px;color:#FFB347;font-weight:500";sm.textContent=f("Bu koltuğu {org} için ayırdık.");q("title").appendChild(sm);
-q("text").textContent=f("Katılımcılara {name} erişimi ve kredi desteği; karşılığında {name}, tek paragraftan çalışan cihaz tasarlayan yapay zekanın Türkiye’deki ilk açık donanım yarışmasının adı olur.");})()</script>
+q("text").textContent=f(x[2]?"Katılımcılara yapay zeka ve bulut desteği; karşılığında {name}, tek paragraftan çalışan cihaz tasarlayan yapay zekanın Türkiye’deki ilk açık donanım yarışmasının adı olur.":"Katılımcılara {name} erişimi ve kredi desteği; karşılığında {name}, tek paragraftan çalışan cihaz tasarlayan yapay zekanın Türkiye’deki ilk açık donanım yarışmasının adı olur.");})()</script>
 <script>(function(){var f=document.getElementById("notify-form"),m=document.getElementById("notify-msg"),e=document.getElementById("notify-email"),b=f.querySelector("button");
 f.addEventListener("submit",function(ev){ev.preventDefault();if(!e.checkValidity()||!e.value.trim()){e.focus();e.reportValidity();return}
 b.disabled=true;m.textContent='Gönderiliyor…';
