@@ -49,6 +49,7 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 @media (prefers-reduced-motion:reduce){*{animation:none !important}.trace{stroke-dashoffset:0}.line{opacity:1}.sw{stroke-dashoffset:0}.st{opacity:0}.st.s4{opacity:1}.arc{opacity:1}}
 .lang{display:flex;border:1px solid #7FA9DA;border-radius:8px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500}.lang a{padding:11px 11px;color:#DCEAF9;text-decoration:none;letter-spacing:.08em}.lang a:hover{color:#FFFFFF;background:#123A6E}.lang a[aria-current]{background:#DCEAF9;color:#0D2E57}
 .notify{display:flex;flex-wrap:wrap;gap:10px}.notify input[type=email]{flex:1 1 220px;min-width:0;font:inherit;font-size:17px;padding:14px 16px;border-radius:10px;border:2px solid #0D2E57;background:#FFF6E8;color:#0D2E57}.notify input[type=email]::placeholder{color:#5B6F8A}.notify input[type=email]:focus{outline:3px solid #0D2E57;outline-offset:2px}.notify button{font:inherit;background:#0D2E57;color:#FFFFFF;font-weight:600;font-size:17px;padding:15px 24px;border-radius:10px;border:0;cursor:pointer}.notify button:hover{background:#123A6E}.notify button:disabled{opacity:.6;cursor:wait}.notify-msg{margin:0;font-size:15px;line-height:22px;min-height:22px;font-weight:500}.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.seat{border:1.5px dashed #FFB347;border-radius:8px;padding:2px 12px;color:#FFB347 !important}.seat-card{border-style:dashed !important;animation:breathe 3s ease-in-out infinite}
 </style>
 </head>
 <body>
@@ -89,13 +90,13 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 <a href="#basvur" style="background: #FFB347; color: #0D2E57; font-weight: 600; font-size: 17px; padding: 16px 26px; border-radius: 10px; text-decoration: none">Notify me when applications open</a>
 <a href="#nasil" style="border: 1px solid #7FA9DA; color: #FFFFFF; font-weight: 500; font-size: 17px; padding: 16px 26px; border-radius: 10px; text-decoration: none">How does it work?</a>
 </div>
-<div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1.5px dashed #7FA9DA; padding-top: 22px; margin-top: 4px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B3CDEB">MAIN SPONSOR</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF">Claude</span><span style="font-size: 15px; color: #D6E6F8">by Anthropic</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B3CDEB; margin-left: 12px">MANUFACTURING PARTNER</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF">Robotistan</span></div>
+<div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1.5px dashed #7FA9DA; padding-top: 22px; margin-top: 4px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B3CDEB">MAIN SPONSOR</span><span data-ai="name" class="seat" style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #FFFFFF">Seat open</span><span data-ai="by" style="font-size: 15px; color: #D6E6F8" hidden></span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B3CDEB; margin-left: 12px">MANUFACTURING PARTNER</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF">Robotistan</span></div>
 </div>
 
 <!-- animated demo -->
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <div style="background: #103463; border: 1px solid #4F7DB5; border-radius: 16px; overflow: hidden">
-<div style="display: flex; gap: 7px; padding: 12px 16px; border-bottom: 1px solid #3F6DA6; align-items: center"><span style="width: 10px; height: 10px; border-radius: 50%; background: #7FA9DA"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #7FA9DA"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #7FA9DA"></span><span style="margin-left: 8px; font-size: 13px; color: #B3CDEB; font-family: 'JetBrains Mono', monospace">Claude · new project</span></div>
+<div style="display: flex; gap: 7px; padding: 12px 16px; border-bottom: 1px solid #3F6DA6; align-items: center"><span style="width: 10px; height: 10px; border-radius: 50%; background: #7FA9DA"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #7FA9DA"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #7FA9DA"></span><span style="margin-left: 8px; font-size: 13px; color: #B3CDEB; font-family: 'JetBrains Mono', monospace" data-ai="term">AI · new project</span></div>
 <div style="padding: 20px 22px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 23px; color: #E6F0FB; display: flex; flex-direction: column; gap: 10px; min-height: 176px">
 <div class="line"><span style="color: #FFB347">›</span> I want an offline voice assistant for the kitchen. Powered over USB-C, with two microphones and a speaker.</div>
 <div class="line l2" style="color: #B3CDEB">✓ Circuit architecture and part choices ready, with rationale</div>
@@ -308,10 +309,10 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 <h2 class="h2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 52px; line-height: 56px; letter-spacing: -0.025em; color: #FFFFFF">A first in Türkiye, among the first in the world. Who will be on board?</h2>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
-<div style="background: #123A6E; border: 1px solid #E0B49C; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="font-size: 13px; color: #D9A58C; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace">Main sponsor · AI partner</div>
-<div style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #F2E6DF">Claude <span style="font-size: 20px; color: #C9A898; font-weight: 500">by Anthropic</span></div>
-<p style="margin: 0; color: #C9B6AC; font-size: 16px; line-height: 25px">Claude access and credits for participants. Türkiye's first open hardware challenge built on a model that can design a working device from a single paragraph.</p>
+<div data-ai="card" class="seat-card" style="background: #123A6E; border: 1px solid #E0B49C; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div data-ai="label" style="font-size: 13px; color: #D9A58C; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace">Main sponsor · AI partner</div>
+<div data-ai="title" style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #F2E6DF">Your model here.</div>
+<p data-ai="text" style="margin: 0; color: #C9B6AC; font-size: 16px; line-height: 25px">The model that gives participants API access and credits becomes the name of the challenge: Türkiye's first open hardware challenge where AI designs a working device from a single paragraph.</p>
 </div>
 <div style="background: #123A6E; border: 1px solid #FFB347; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
 <div style="font-size: 13px; color: #FFB347; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace">Manufacturing partner</div>
@@ -410,7 +411,14 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 </footer>
 
 </div>
-<script>document.querySelectorAll(".lang a").forEach(function(a){a.addEventListener("click",function(){if(location.hash)a.href=a.getAttribute("href").split("#")[0]+location.hash})})</script>
+<script>(function(){var P={claude:["Claude","Anthropic"],anthropic:["Claude","Anthropic"],gemini:["Gemini","Google"],google:["Gemini","Google"],openai:["OpenAI","OpenAI"],gpt:["OpenAI","OpenAI"],mistral:["Mistral","Mistral AI"],elevenlabs:["ElevenLabs","ElevenLabs"],aws:["Amazon Bedrock","AWS"],bedrock:["Amazon Bedrock","AWS"],azure:["Azure AI","Microsoft"],microsoft:["Azure AI","Microsoft"],xai:["Grok","xAI"],grok:["Grok","xAI"],deepseek:["DeepSeek","DeepSeek"],cohere:["Cohere","Cohere"],groq:["Groq","Groq"],zoo:["Zoo","Zoo"],quilter:["Quilter","Quilter"]};
+var k=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z]/g,""),x=P[k];
+document.querySelectorAll(".lang a").forEach(function(a){a.addEventListener("click",function(){a.href=a.getAttribute("href").split(/[?#]/)[0]+location.search+location.hash})});
+if(!x)return;var n=x[0],o=x[1],q=function(s){return document.querySelector('[data-ai="'+s+'"]')},f=function(s){return s.split("{name}").join(n).split("{org}").join(o)};
+var e=q("name");e.textContent=n+"?";if(o!==n){var by=q("by");by.textContent="by "+o;by.hidden=false}
+q("term").textContent=n+" · new project";q("label").textContent="Main sponsor · seat saved for you";
+q("title").innerHTML="";q("title").textContent=n+" ";var sm=document.createElement("span");sm.style.cssText="display:block;margin-top:6px;font-size:18px;line-height:24px;color:#FFB347;font-weight:500";sm.textContent=f("We saved this seat for {org}.");q("title").appendChild(sm);
+q("text").textContent=f("{name} access and credits for participants; in return, {name} becomes the name of Türkiye's first open hardware challenge where AI designs a working device from a single paragraph.");})()</script>
 <script>(function(){var f=document.getElementById("notify-form"),m=document.getElementById("notify-msg"),e=document.getElementById("notify-email"),b=f.querySelector("button");
 f.addEventListener("submit",function(ev){ev.preventDefault();if(!e.checkValidity()||!e.value.trim()){e.focus();e.reportValidity();return}
 b.disabled=true;m.textContent='Sending…';
