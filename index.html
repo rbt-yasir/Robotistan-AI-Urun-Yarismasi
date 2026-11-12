@@ -10,6 +10,8 @@
 <meta property="og:image" content="box.jpg">
 <meta name="theme-color" content="#0D2E57">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='4' y='4' width='20' height='20' rx='3' fill='none' stroke='%23FFB347' stroke-width='2'/%3E%3Crect x='10' y='10' width='8' height='8' rx='1' fill='%23FFB347'/%3E%3C/svg%3E">
+<link rel="alternate" hreflang="tr" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
@@ -45,6 +47,7 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 .glow{animation:glow 1.8s ease-in-out infinite}@keyframes glow{50%{opacity:.35}}
 .arc{opacity:0;animation:arc 1.8s ease-out infinite}.arc.a2{animation-delay:.3s}.arc.a3{animation-delay:.6s}@keyframes arc{30%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important}.trace{stroke-dashoffset:0}.line{opacity:1}.sw{stroke-dashoffset:0}.st{opacity:0}.st.s4{opacity:1}.arc{opacity:1}}
+.lang{display:flex;border:1px solid #7FA9DA;border-radius:8px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500}.lang a{padding:11px 11px;color:#DCEAF9;text-decoration:none;letter-spacing:.08em}.lang a:hover{color:#FFFFFF;background:#123A6E}.lang a[aria-current]{background:#DCEAF9;color:#0D2E57}
 </style>
 </head>
 <body>
@@ -58,7 +61,7 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 <svg aria-hidden="true" width="30" height="30" viewBox="0 0 28 28" fill="none" stroke="#FFB347" stroke-width="2"><rect x="4" y="4" width="20" height="20" rx="3"></rect><path d="M9 4V1M14 4V1M19 4V1M9 27v-3M14 27v-3M19 27v-3M1 9h3M1 14h3M1 19h3M27 9h-3M27 14h-3M27 19h-3"></path><rect x="10" y="10" width="8" height="8" rx="1" fill="#FFB347"></rect></svg>
 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px">Robotistan <span style="color: #B3CDEB; font-weight: 500">/ AI Donanım Yarışması</span></span>
 </a>
-<div class="hide-sm" style="display: flex; gap: 28px; font-size: 15px">
+<div class="hide-sm" style="display: flex; gap: 22px; font-size: 15px">
 <a href="#nasil" style="color: #DCEAF9; text-decoration: none">Nasıl işliyor</a>
 <a href="#neden" style="color: #DCEAF9; text-decoration: none">Neden</a>
 <a href="#fikirler" style="color: #DCEAF9; text-decoration: none">Neler yapılabilir</a>
@@ -66,6 +69,7 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 <a href="#takvim" style="color: #DCEAF9; text-decoration: none">Takvim</a>
 </div>
 <div style="display: flex; gap: 10px">
+<div class="lang" role="group" aria-label="Dil / Language"><a href="index.html" lang="tr" hreflang="tr" aria-current="page">TR</a><a href="en.html" lang="en" hreflang="en">EN</a></div>
 <a href="#partnerler" class="hide-sm" style="border: 1px solid #7FA9DA; color: #FFFFFF; font-weight: 600; font-size: 15px; padding: 11px 18px; border-radius: 8px; text-decoration: none">Partner ol</a>
 <a href="#basvur" style="background: #FFB347; color: #0D2E57; font-weight: 600; font-size: 15px; padding: 11px 18px; border-radius: 8px; text-decoration: none">Haber ver bana</a>
 </div>
@@ -396,5 +400,6 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 </footer>
 
 </div>
+<script>document.querySelectorAll(".lang a").forEach(function(a){a.addEventListener("click",function(){if(location.hash)a.href=a.getAttribute("href").split("#")[0]+location.hash})})</script>
 </body>
 </html>
