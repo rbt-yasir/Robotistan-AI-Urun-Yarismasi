@@ -48,6 +48,7 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 .arc{opacity:0;animation:arc 1.8s ease-out infinite}.arc.a2{animation-delay:.3s}.arc.a3{animation-delay:.6s}@keyframes arc{30%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important}.trace{stroke-dashoffset:0}.line{opacity:1}.sw{stroke-dashoffset:0}.st{opacity:0}.st.s4{opacity:1}.arc{opacity:1}}
 .lang{display:flex;border:1px solid #7FA9DA;border-radius:8px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500}.lang a{padding:11px 11px;color:#DCEAF9;text-decoration:none;letter-spacing:.08em}.lang a:hover{color:#FFFFFF;background:#123A6E}.lang a[aria-current]{background:#DCEAF9;color:#0D2E57}
+.notify{display:flex;flex-wrap:wrap;gap:10px}.notify input[type=email]{flex:1 1 220px;min-width:0;font:inherit;font-size:17px;padding:14px 16px;border-radius:10px;border:2px solid #0D2E57;background:#FFF6E8;color:#0D2E57}.notify input[type=email]::placeholder{color:#5B6F8A}.notify input[type=email]:focus{outline:3px solid #0D2E57;outline-offset:2px}.notify button{font:inherit;background:#0D2E57;color:#FFFFFF;font-weight:600;font-size:17px;padding:15px 24px;border-radius:10px;border:0;cursor:pointer}.notify button:hover{background:#123A6E}.notify button:disabled{opacity:.6;cursor:wait}.notify-msg{margin:0;font-size:15px;line-height:22px;min-height:22px;font-weight:500}.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 </style>
 </head>
 <body>
@@ -382,12 +383,21 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 <div id="basvur" style="background: #FFB347; border-radius: 22px; padding: 44px; display: flex; flex-direction: column; gap: 18px; color: #0D2E57">
 <div style="font-weight: 700; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace">For makers</div>
 <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 44px; letter-spacing: -0.02em">Push the limit yourself.</h2>
-<a href="[BAŞVURU LİNKİ]" style="align-self: flex-start; background: #0D2E57; color: #FFFFFF; font-weight: 600; font-size: 17px; padding: 15px 24px; border-radius: 10px; text-decoration: none">Notify me when applications open</a>
+<form class="notify" id="notify-form" action="https://formsubmit.co/ajax/hello@robotistan.com" method="post" novalidate>
+<label for="notify-email" class="hp">E-mail address</label>
+<input type="email" id="notify-email" name="email" required autocomplete="email" placeholder="Your e-mail address">
+<input type="hidden" name="_subject" value="Challenge: application notify list (EN)">
+<input type="hidden" name="dil" value="EN">
+<input type="hidden" name="_template" value="table">
+<div class="hp" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+<button type="submit">Notify me when applications open</button>
+</form>
+<p class="notify-msg" id="notify-msg" role="status" aria-live="polite">We only use your e-mail to let you know when applications open.</p>
 </div>
 <div style="background: #103463; border: 1px solid #5B8AC2; border-radius: 22px; padding: 44px; display: flex; flex-direction: column; gap: 18px">
 <div style="color: #FFB347; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace">For brands</div>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 44px; letter-spacing: -0.02em; color: #FFFFFF">Put your brand on the box of the first product.</h2>
-<a href="mailto:[E-POSTA]" style="align-self: flex-start; border: 1px solid #7FA9DA; color: #FFFFFF; font-weight: 600; font-size: 17px; padding: 15px 24px; border-radius: 10px; text-decoration: none">Get in touch about partnering</a>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 44px; letter-spacing: -0.02em; color: #FFFFFF">Put your brand on the box of the first AI product.</h2>
+<a href="mailto:hello@robotistan.com" style="align-self: flex-start; border: 1px solid #7FA9DA; color: #FFFFFF; font-weight: 600; font-size: 17px; padding: 15px 24px; border-radius: 10px; text-decoration: none">Get in touch about partnering</a>
 </div>
 </div>
 </section>
@@ -401,5 +411,10 @@ a{color:#FFB347}a:hover{color:#FFD08A}
 
 </div>
 <script>document.querySelectorAll(".lang a").forEach(function(a){a.addEventListener("click",function(){if(location.hash)a.href=a.getAttribute("href").split("#")[0]+location.hash})})</script>
+<script>(function(){var f=document.getElementById("notify-form"),m=document.getElementById("notify-msg"),e=document.getElementById("notify-email"),b=f.querySelector("button");
+f.addEventListener("submit",function(ev){ev.preventDefault();if(!e.checkValidity()||!e.value.trim()){e.focus();e.reportValidity();return}
+b.disabled=true;m.textContent='Sending…';
+fetch(f.action,{method:"POST",headers:{"Accept":"application/json"},body:new FormData(f)}).then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=="true")throw 0})})
+.then(function(){f.reset();f.style.display="none";m.textContent="Thanks! We'll e-mail you when applications open."}).catch(function(){b.disabled=false;m.textContent='Could not send. Please try again later or write to hello@robotistan.com.'})})})()</script>
 </body>
 </html>
